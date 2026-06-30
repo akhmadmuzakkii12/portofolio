@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akhmad Muzakkii | Data Scientist</title>
+  <meta name="description" content="Portfolio profesional Akhmad Muzakkii, Sarjana Data Science yang berpengalaman dalam machine learning, data analysis, dan AI solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-trail-container" id="trailContainer"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-text">AM</span>
+      <span class="logo-dot">.</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">
+      <span>Hire Me</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for Work</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">
+          <span class="title-word" data-text="Akhmad">Akhmad</span>
+        </span>
+        <span class="title-line">
+          <span class="title-word gradient-text" data-text="Muzakkii">Muzakkii</span>
+        </span>
+      </h1>
+      <div class="hero-subtitle">
+        <span class="static-text">I'm a </span>
+        <span class="dynamic-text" id="dynamicText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-description">
+        Transforming raw data into actionable insights and intelligent solutions. 
+        Passionate about machine learning, statistical modeling, and building data-driven products that make a real impact.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <span>Explore Projects</span>
+          <div class="btn-ripple"></div>
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="20">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="profile-container">
+        <div class="profile-glow"></div>
+        <div class="profile-ring ring-1"></div>
+        <div class="profile-ring ring-2"></div>
+        <div class="profile-ring ring-3"></div>
+        <div class="profile-img-wrapper">
+          <img src="assets/images/profile.jpg" alt="Akhmad Muzakkii" class="profile-img" />
+          <div class="profile-overlay"></div>
+        </div>
+        <div class="floating-card card-ml">
+          <div class="card-icon">🤖</div>
+          <div class="card-info">
+            <span class="card-title">Machine Learning</span>
+            <span class="card-sub">TensorFlow · PyTorch</span>
+          </div>
+        </div>
+        <div class="floating-card card-stats">
+          <div class="card-icon">📊</div>
+          <div class="card-info">
+            <span class="card-title">Data Analysis</span>
+            <span class="card-sub">98.2% Accuracy</span>
+          </div>
+        </div>
+        <div class="floating-card card-ai">
+          <div class="card-icon">🧠</div>
+          <div class="card-info">
+            <span class="card-title">Deep Learning</span>
+            <span class="card-sub">NLP · Computer Vision</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Turning Data into <span class="gradient-text">Decisions</span></h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text-block">
+          <p class="about-lead">
+            Saya adalah seorang Data Scientist dengan gelar Sarjana Data Science, 
+            bersemangat dalam mengeksplorasi pola tersembunyi dari data yang kompleks 
+            dan mengubahnya menjadi solusi cerdas yang berdampak nyata.
+          </p>
+          <p class="about-body">
+            Keahlian saya mencakup machine learning, deep learning, analisis statistik, 
+            dan visualisasi data. Saya percaya bahwa data adalah bahasa universal yang, 
+            ketika diinterpretasikan dengan tepat, dapat membuka wawasan yang mengubah bisnis.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">🎓</div>
+              <div>
+                <strong>S1 Data Science</strong>
+                <span>Lulusan Terbaik</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">📍</div>
+              <div>
+                <strong>Indonesia</strong>
+                <span>Remote Friendly</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🚀</div>
+              <div>
+                <strong>Open to Opportunities</strong>
+                <span>Full-time & Freelance</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-download">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+        <div class="about-visual-block">
+          <div class="code-window">
+            <div class="window-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="window-title">muzakkii.py</span>
+            </div>
+            <div class="code-content">
+              <pre class="code-block"><code><span class="code-keyword">class</span> <span class="code-class">AkhmadMuzakkii</span>:
+    <span class="code-keyword">def</span> <span class="code-fn">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-str">"Akhmad Muzakkii"</span>
+        <span class="code-param">self</span>.role = <span class="code-str">"Data Scientist"</span>
+        <span class="code-param">self</span>.degree = <span class="code-str">"S1 Data Science"</span>
+        <span class="code-param">self</span>.skills = [
+            <span class="code-str">"Machine Learning"</span>,
+            <span class="code-str">"Deep Learning"</span>,
+            <span class="code-str">"Data Analysis"</span>,
+            <span class="code-str">"Python"</span>, <span class="code-str">"R"</span>,
+            <span class="code-str">"SQL"</span>, <span class="code-str">"Tableau"</span>
+        ]
+        <span class="code-param">self</span>.passion = <span class="code-str">"AI for Good"</span>
+
+    <span class="code-keyword">def</span> <span class="code-fn">solve_problem</span>(<span class="code-param">self</span>, data):
+        insights = <span class="code-param">self</span>.analyze(data)
+        model = <span class="code-param">self</span>.build_model(insights)
+        <span class="code-keyword">return</span> model.predict(<span class="code-str">"better future"</span>)
+
+<span class="code-comment"># Initialize greatness</span>
+muzakkii = <span class="code-class">AkhmadMuzakkii</span>()
+muzakkii.solve_problem(<span class="code-str">"your data"</span>)</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Technical Stack</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span> & Tools</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🐍</span>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🤖</span>
+            <h3>ML / AI</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">HuggingFace</span>
+            <span class="skill-tag">XGBoost</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">📊</span>
+            <h3>Data & Analytics</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">BigQuery</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">☁️</span>
+            <h3>Tools & Cloud</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Google Cloud</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Looker Studio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-badges">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">R</span>
+        <span class="tech-badge">TensorFlow</span>
+        <span class="tech-badge">PyTorch</span>
+        <span class="tech-badge">Scikit-Learn</span>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">NumPy</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">Tableau</span>
+        <span class="tech-badge">Power BI</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">Google Cloud</span>
+        <span class="tech-badge">OpenCV</span>
+        <span class="tech-badge">NLTK</span>
+        <span class="tech-badge">Spark</span>
+        <span class="tech-badge">Hadoop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">Geser untuk menjelajahi proyek-proyek unggulan saya</p>
+      </div>
+    </div>
+
+    <div class="projects-slider-wrapper">
+      <div class="slider-hint">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span>Drag to explore</span>
+      </div>
+      <div class="projects-track" id="projectsTrack">
+        <div class="project-card" id="proj1">
+          <div class="project-card-inner">
+            <div class="project-number">01</div>
+            <div class="project-tags">
+              <span class="proj-tag">Deep Learning</span>
+              <span class="proj-tag">NLP</span>
+            </div>
+            <div class="project-icon-bg">
+              <div class="project-icon">🧠</div>
+            </div>
+            <h3 class="project-title">Sentiment Analysis Engine</h3>
+            <p class="project-desc">
+              Model analisis sentimen berbasis BERT untuk menganalisis ulasan produk e-commerce Indonesia dengan akurasi 97.3%.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>BERT</span><span>Transformers</span><span>FastAPI</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><span class="metric-value">97.3%</span><span class="metric-label">Accuracy</span></div>
+              <div class="metric"><span class="metric-value">50K+</span><span class="metric-label">Reviews</span></div>
+            </div>
+            <a href="#" class="project-link">
+              <span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card" id="proj2">
+          <div class="project-card-inner">
+            <div class="project-number">02</div>
+            <div class="project-tags">
+              <span class="proj-tag">Computer Vision</span>
+              <span class="proj-tag">CNN</span>
+            </div>
+            <div class="project-icon-bg">
+              <div class="project-icon">👁️</div>
+            </div>
+            <h3 class="project-title">Medical Image Detection</h3>
+            <p class="project-desc">
+              Sistem deteksi penyakit pada citra medis (X-Ray) menggunakan CNN dengan arsitektur ResNet-50, membantu diagnosis dokter.
+            </p>
+            <div class="project-tech">
+              <span>PyTorch</span><span>ResNet-50</span><span>OpenCV</span><span>Streamlit</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><span class="metric-value">94.8%</span><span class="metric-label">Precision</span></div>
+              <div class="metric"><span class="metric-value">10K+</span><span class="metric-label">Images</span></div>
+            </div>
+            <a href="#" class="project-link">
+              <span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card featured" id="proj3">
+          <div class="project-card-inner">
+            <div class="project-number">03</div>
+            <div class="project-tags">
+              <span class="proj-tag">Predictive Analytics</span>
+              <span class="proj-tag highlight-tag">Featured</span>
+            </div>
+            <div class="project-icon-bg">
+              <div class="project-icon">📈</div>
+            </div>
+            <h3 class="project-title">Stock Price Prediction</h3>
+            <p class="project-desc">
+              Model prediksi harga saham menggunakan LSTM dan Transformer dengan data real-time dari IHSG. Deployed sebagai web app.
+            </p>
+            <div class="project-tech">
+              <span>TensorFlow</span><span>LSTM</span><span>Plotly</span><span>GCP</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><span class="metric-value">91.2%</span><span class="metric-label">R² Score</span></div>
+              <div class="metric"><span class="metric-value">Real-time</span><span class="metric-label">Data Feed</span></div>
+            </div>
+            <a href="#" class="project-link">
+              <span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card" id="proj4">
+          <div class="project-card-inner">
+            <div class="project-number">04</div>
+            <div class="project-tags">
+              <span class="proj-tag">Recommender System</span>
+              <span class="proj-tag">ML</span>
+            </div>
+            <div class="project-icon-bg">
+              <div class="project-icon">🎯</div>
+            </div>
+            <h3 class="project-title">Personalized Recommender</h3>
+            <p class="project-desc">
+              Sistem rekomendasi konten berbasis collaborative filtering dan matrix factorization untuk platform e-learning.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Surprise</span><span>Neo4j</span><span>Flask</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><span class="metric-value">35%</span><span class="metric-label">CTR Boost</span></div>
+              <div class="metric"><span class="metric-value">100K+</span><span class="metric-label">Users</span></div>
+            </div>
+            <a href="#" class="project-link">
+              <span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card" id="proj5">
+          <div class="project-card-inner">
+            <div class="project-number">05</div>
+            <div class="project-tags">
+              <span class="proj-tag">Time Series</span>
+              <span class="proj-tag">IoT</span>
+            </div>
+            <div class="project-icon-bg">
+              <div class="project-icon">🌾</div>
+            </div>
+            <h3 class="project-title">Smart Agriculture Forecast</h3>
+            <p class="project-desc">
+              Sistem prediksi hasil panen menggunakan data sensor IoT dan time series forecasting untuk petani Indonesia.
+            </p>
+            <div class="project-tech">
+              <span>Prophet</span><span>XGBoost</span><span>MQTT</span><span>Dash</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><span class="metric-value">88%</span><span class="metric-label">Accuracy</span></div>
+              <div class="metric"><span class="metric-value">500+</span><span class="metric-label">Farms</span></div>
+            </div>
+            <a href="#" class="project-link">
+              <span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card" id="proj6">
+          <div class="project-card-inner">
+            <div class="project-number">06</div>
+            <div class="project-tags">
+              <span class="proj-tag">LLM</span>
+              <span class="proj-tag">RAG</span>
+            </div>
+            <div class="project-icon-bg">
+              <div class="project-icon">💬</div>
+            </div>
+            <h3 class="project-title">AI Chatbot with RAG</h3>
+            <p class="project-desc">
+              Chatbot cerdas berbasis RAG (Retrieval-Augmented Generation) dengan LangChain dan Llama 2 untuk customer service.
+            </p>
+            <div class="project-tech">
+              <span>LangChain</span><span>Llama 2</span><span>Pinecone</span><span>FastAPI</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric"><span class="metric-value">85%</span><span class="metric-label">Resolution</span></div>
+              <div class="metric"><span class="metric-value">24/7</span><span class="metric-label">Uptime</span></div>
+            </div>
+            <a href="#" class="project-link">
+              <span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn prev" id="sliderPrev" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn next" id="sliderNext" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section experience-section" id="experience">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Journey</span>
+        <h2 class="section-title">Education & <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="timelineProgress"></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-icon">🎓</div>
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">2020 – 2024</div>
+            <div class="timeline-badge edu">Education</div>
+            <h3 class="timeline-title">S1 Data Science</h3>
+            <span class="timeline-place">Universitas Terkemuka Indonesia</span>
+            <p class="timeline-desc">
+              Lulus dengan predikat Cumlaude (IPK 3.87/4.00). Fokus pada machine learning, 
+              statistik lanjutan, dan big data analytics. Aktif dalam riset publikasi ilmiah.
+            </p>
+            <div class="timeline-tags">
+              <span>IPK 3.87</span><span>Cumlaude</span><span>Best Graduate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-icon">💼</div>
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">2024 – Sekarang</div>
+            <div class="timeline-badge work">Full-time</div>
+            <h3 class="timeline-title">Junior Data Scientist</h3>
+            <span class="timeline-place">TechCorp Indonesia</span>
+            <p class="timeline-desc">
+              Mengembangkan model ML untuk prediksi churn pelanggan dan sistem rekomendasi. 
+              Berhasil meningkatkan retensi pelanggan sebesar 28% dalam 6 bulan pertama.
+            </p>
+            <div class="timeline-tags">
+              <span>Python</span><span>ML</span><span>Churn Prediction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-icon">🏢</div>
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">Jan – Jun 2024</div>
+            <div class="timeline-badge intern">Internship</div>
+            <h3 class="timeline-title">Data Analyst Intern</h3>
+            <span class="timeline-place">Gojek · Data Team</span>
+            <p class="timeline-desc">
+              Melakukan analisis data perjalanan pengguna untuk optimasi route dan pricing. 
+              Membuat dashboard real-time yang digunakan oleh tim bisnis setiap hari.
+            </p>
+            <div class="timeline-tags">
+              <span>BigQuery</span><span>Looker</span><span>A/B Testing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-icon">🔬</div>
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-badge research">Research</div>
+            <h3 class="timeline-title">Research Assistant</h3>
+            <span class="timeline-place">AI Research Lab – Universitas</span>
+            <p class="timeline-desc">
+              Terlibat dalam penelitian NLP untuk bahasa Indonesia. Co-author pada jurnal 
+              internasional tentang hate speech detection pada media sosial.
+            </p>
+            <div class="timeline-tags">
+              <span>NLP</span><span>Publication</span><span>BERT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-icon">🏆</div>
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">2022 – 2023</div>
+            <div class="timeline-badge award">Achievement</div>
+            <h3 class="timeline-title">Kompetisi Data Science Nasional</h3>
+            <span class="timeline-place">Juara 1 – DataFest Indonesia 2023</span>
+            <p class="timeline-desc">
+              Memenangkan kompetisi data science tingkat nasional dengan solusi prediksi 
+              kemiskinan berbasis machine learning dari data sensus dan satelit.
+            </p>
+            <div class="timeline-tags">
+              <span>Competition</span><span>1st Place</span><span>National</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-icon">📜</div>
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-date">2021 – 2023</div>
+            <div class="timeline-badge cert">Certification</div>
+            <h3 class="timeline-title">Professional Certifications</h3>
+            <span class="timeline-place">Google · IBM · Coursera</span>
+            <p class="timeline-desc">
+              Menyelesaikan berbagai sertifikasi profesional: Google Data Analytics, 
+              IBM Machine Learning, TensorFlow Developer Certificate, dan AWS Cloud Practitioner.
+            </p>
+            <div class="timeline-tags">
+              <span>Google</span><span>IBM</span><span>TensorFlow</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-desc">Siap berkolaborasi? Hubungi saya sekarang!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card-big">
+            <div class="contact-avatar-wrap">
+              <img src="assets/images/profile.jpg" alt="Akhmad Muzakkii" class="contact-avatar" />
+              <div class="status-dot"></div>
+            </div>
+            <h3>Akhmad Muzakkii</h3>
+            <p>Data Scientist · AI Enthusiast</p>
+            <div class="contact-details">
+              <a href="mailto:akhmadmuzakkii05@gmail.com" class="contact-detail-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>akhmadmuzakkii05@gmail.com</span>
+              </a>
+              <a href="tel:+6281234567890" class="contact-detail-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.11 6.11l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+62 812-3456-7890</span>
+              </a>
+              <div class="contact-detail-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Jakarta, Indonesia</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-btn" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" class="social-btn" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="#" class="social-btn" title="Kaggle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.6 17.4l-4.1-4.7-1.4 1.5v3.2H9V6h2.1v6.1l4.9-6.1h2.6l-4.6 5.5 5.1 5.9H16.6z"/></svg>
+              </a>
+              <a href="#" class="social-btn" title="Medium">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/akhmadmuzakkii05@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+            <div class="input-line"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+            <div class="input-line"></div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subjek</label>
+            <input type="text" id="subject" placeholder="Collaboration Opportunity" />
+            <div class="input-line"></div>
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" rows="5" placeholder="Ceritakan project atau ide Anda..."></textarea>
+            <div class="input-line"></div>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="submit-text">Kirim Pesan</span>
+            <svg class="submit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <div class="submit-loader" id="submitLoader"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span class="logo-text">AM</span><span class="logo-dot">.</span>
+      </div>
+      <p class="footer-text">© 2024 Akhmad Muzakkii. Crafted with ❤️ and lots of data.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
